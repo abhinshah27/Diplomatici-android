@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_margin_md"
+    android:paddingBottom="@dimen/activity_margin_md">
+
+    <TextView
+        android:id="@+id/dateHeader"
+        style="@style/Regular14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="@color/black_54"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Tues, 09 Oct, 14:27" />
+
+    <LinearLayout
+        android:id="@+id/background"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/background_chat_incoming_last"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateHeader"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/documentIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@drawable/common_google_signin_btn_icon_dark_normal" />
+
+        <androidx.emoji.widget.EmojiAppCompatTextView
+            android:id="@+id/message"
+            style="@style/Regular16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAlignment="center"
+            tools:text="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/infoFooter"
+        style="@style/Regular12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:textAlignment="textStart"
+        android:textColor="@color/black_54"
+        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toBottomOf="@+id/background"
+        tools:text="Read, Tues 09 Oct, 14:33" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

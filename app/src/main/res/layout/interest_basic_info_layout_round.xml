@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/background_rounded_2_bottom"
+    android:paddingBottom="@dimen/activity_margin_lg"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_margin_lg">
+
+        <ImageView
+            android:id="@+id/preferred_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            app:srcCompat="@drawable/ic_preferred_interest_small"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/preferred_icon_invis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_preferred_interest_small"/>
+
+        <androidx.emoji.widget.EmojiAppCompatTextView
+            android:id="@+id/interest_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/activity_margin_lg"
+            android:paddingEnd="@dimen/activity_margin_lg"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textAlignment="center"
+            android:layout_toEndOf="@id/preferred_icon_invis"
+            android:layout_toStartOf="@id/preferred_icon"
+            android:paddingTop="25dp"
+            style="@style/SemiBold20"
+            android:gravity="bottom|center_horizontal"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeMinTextSize="14sp"
+            app:autoSizeMaxTextSize="20sp"
+            app:autoSizeTextType="uniform"
+            tools:text="New York Hilton Midtown"/>
+
+        <androidx.emoji.widget.EmojiAppCompatEditText
+            android:id="@+id/interest_name_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/preferred_icon_invis"
+            android:layout_toStartOf="@id/preferred_icon"
+            android:paddingTop="25dp"
+            style="@style/Bold20"
+            android:ellipsize="end"
+            android:gravity="bottom|center_horizontal"
+            android:maxLines="1"
+            android:textColorHint="@color/black_38"
+            android:inputType="textCapWords"
+            android:textCursorDrawable="@drawable/custom_cursor_drawable"
+            android:scrollHorizontally="true"
+            android:hint="@string/interest_detail_hint_name"
+            android:background="@null"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/headline_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/profile_location_free_text_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/activity_margin"
+            android:paddingEnd="@dimen/activity_margin"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/icon_location"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="5dp"
+                app:srcCompat="@drawable/ic_map_pin_black"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/location_free_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                style="@style/Regular14"
+                android:textAlignment="center"
+                android:maxLines="8"
+                tools:text="@tools:sample/lorem/random"/>
+        </LinearLayout>
+
+        <androidx.emoji.widget.EmojiAppCompatTextView
+            android:id="@+id/interest_headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/activity_margin_lg"
+            android:paddingEnd="@dimen/activity_margin_lg"
+            android:ellipsize="end"
+            style="@style/Regular14"
+            android:textAlignment="center"
+            tools:text="Association football club from Italy"
+            android:visibility="gone"/>
+
+        <androidx.emoji.widget.EmojiAppCompatEditText
+            android:id="@+id/interest_headline_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:hint="@string/interest_detail_hint_headline"
+            style="@style/Regular14"
+            android:textColorHint="@color/black_38"
+            android:inputType="textCapSentences"
+            android:textCursorDrawable="@drawable/custom_cursor_drawable"
+            android:background="@null"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <LinearLayout android:id="@+id/hearts_followers_section"
+        android:layout_width="match_parent"
+        android:paddingStart="@dimen/activity_margin"
+        android:paddingEnd="@dimen/activity_margin"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/talk_to_us"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginEnd="5dp"
+            style="@style/SemiBold14"
+            android:textColor="@color/black_70"
+            android:text="Parla con Noi"
+            android:background="@drawable/shape_rectangle_rounded_border_30_1dp"/>
+
+        <TextView
+            android:id="@+id/job_openings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginStart="5dp"
+            style="@style/SemiBold14"
+            android:textColor="@color/black_70"
+            android:text="Job Openings"
+            android:background="@drawable/shape_rectangle_rounded_border_30_1dp"/>
+    </LinearLayout>
+</LinearLayout>

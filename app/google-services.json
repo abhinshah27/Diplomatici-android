@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "580486374567",
+    "firebase_url": "https://diplomatici.firebaseio.com",
+    "project_id": "diplomatici",
+    "storage_bucket": "diplomatici.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580486374567:android:3ee560465ecdefc3892782",
+        "android_client_info": {
+          "package_name": "diplomatici.groops.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "580486374567-bqq7gbehaa7u2gidim1kq9u9t9vc0bai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5ctm_To_GTsb-7t3tSJnYjZ2BwKZh7Ew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "580486374567-bqq7gbehaa7u2gidim1kq9u9t9vc0bai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580486374567:android:8e45b299a88061c6892782",
+        "android_client_info": {
+          "package_name": "diplomatici.groops.app.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "580486374567-bqq7gbehaa7u2gidim1kq9u9t9vc0bai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5ctm_To_GTsb-7t3tSJnYjZ2BwKZh7Ew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "580486374567-bqq7gbehaa7u2gidim1kq9u9t9vc0bai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
